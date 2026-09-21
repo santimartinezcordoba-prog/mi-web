@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Web personal de Santiago Martínez Córdoba, estudiante de 1º DAM en el IES Simarro." />
+  <title>Santiago Martínez Córdoba | 1º DAM · IES Simarro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <noscript>
+    <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+  </noscript>
+</head>
+<body>
+  <!-- Estela Sandevistan del ratón -->
+  <canvas id="sandevistan" aria-hidden="true"></canvas>
+
+  <!-- Selector de tema -->
+  <div class="theme-switch" role="group" aria-label="Selector de tema">
+    <button type="button" class="theme-btn" data-theme="dark"  aria-pressed="true"  title="Modo oscuro">◐ <span class="theme-label">Oscuro</span></button>
+    <button type="button" class="theme-btn" data-theme="light" aria-pressed="false" title="Modo claro">☀ <span class="theme-label">Claro</span></button>
+    <button type="button" class="theme-btn" data-theme="8bit"  aria-pressed="false" title="Modo 8 bits">▦ <span class="theme-label">8-bit</span></button>
+  </div>
+
+  <header class="hero" id="inicio">
+    <div class="hero-inner">
+      <p class="eyebrow">Marca personal · 1º DAM · IES Simarro</p>
+      <h1 class="glitch" data-text="Santiago Martínez Córdoba">Santiago Martínez Córdoba</h1>
+      <p class="typed-wrap">
+        <span class="prompt">&gt;</span>
+        <span data-typed="Estudiante de 1º DAM en el IES Simarro"></span>
+      </p>
+      <nav aria-label="Navegación principal" class="nav">
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#hecho">Lo que he hecho</a></li>
+          <li><a href="#gusta">Me gusta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre-mi" class="section reveal">
+      <h2>Sobre mí</h2>
+      <ul class="facts">
+        <li><span class="fact-label">Edad</span> <span class="fact-value"><span id="edad">—</span> años</span></li>
+        <li><span class="fact-label">Cumpleaños</span> <span class="fact-value">11 de octubre</span></li>
+        <li><span class="fact-label">Curso</span> <span class="fact-value">1º DAM · IES Simarro</span></li>
+      </ul>
+      <p>Soy <strong>Santiago Martínez Córdoba</strong>, estudiante del ciclo de <strong>1º DAM</strong> en el <strong>IES Simarro</strong>.</p>
+      <p>Ahora mismo estoy descubriendo las salidas profesionales de este módulo. Lo que más me interesa de la programación es que resulta entretenida y que produce satisfacción al completar un proyecto.</p>
+      <p>Me mueve la mezcla de tecnología, música, videojuegos, cine y un estilo visual <span class="accent">cyberpunk</span> con colores vivos.</p>
+    </section>
+
+    <section id="hecho" class="section reveal">
+      <h2>Lo que he hecho</h2>
+      <div class="cards">
+        <article class="card"><h3>Música</h3><p>He tocado en una banda de música y en una batukada.</p></article>
+        <article class="card"><h3>Viaje</h3><p>Me fui de viaje a Praga con el fin de curso.</p></article>
+        <article class="card"><h3>Deporte</h3><p>Hice CrossFit en mis tiempos libres.</p></article>
+        <article class="card"><h3>Pizzería</h3><p>Soy camarero en una pizzería de mi pueblo en verano; ya llevo 3 años.</p></article>
+        <article class="card"><h3>Bar</h3><p>Soy camarero en un bar los fines de semana, donde empecé este verano.</p></article>
+        <article class="card"><h3>DAM</h3><p>Estudio 1º de DAM y estoy explorando posibles salidas profesionales.</p></article>
+      </div>
+    </section>
+
+    <section id="gusta" class="section reveal">
+      <h2>Me gusta</h2>
+      <ul class="tags">
+        <li><span class="tag">Videojuegos: Pokémon</span></li>
+        <li><span class="tag">Series: Cómo conocí a vuestra madre</span></li>
+        <li><span class="tag">Películas: Baby Driver</span></li>
+        <li><span class="tag">Películas: Your Name</span></li>
+        <li><span class="tag">Colores vivos: rojo, amarillo y naranja</span></li>
+        <li><span class="tag">También colores monocromáticos</span></li>
+        <li><span class="tag">Estilo cyberpunk</span></li>
+        <li><span class="tag">Programar por satisfacción al terminar proyectos</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacto">
+    <div class="footer-inner">
+      <h2>Contacto</h2>
+      <address>
+        <a class="btn" href="mailto:santimartinezcordoba@gmail.com">santimartinezcordoba@gmail.com</a>
+        <button class="btn copy-btn" type="button" data-copy="santimartinezcordoba@gmail.com">Copiar correo</button>
+      </address>
+      <ul class="social">
+        <li><a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="mailto:santimartinezcordoba@gmail.com">Email</a></li>
+      </ul>
+      <p class="copyright">© <span id="year"></span> Santiago Martínez Córdoba · 1º DAM · IES Simarro</p>
+    </div>
+  </footer>
+</body>
+</html>
