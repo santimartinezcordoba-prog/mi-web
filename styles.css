@@ -66,6 +66,11 @@ a:hover,a:focus-visible{color:#fff}
 .theme-btn:hover{border-color:var(--accent1)}
 .theme-btn.active{background:var(--accent1);color:#fff}
 
+/* Color de las letras del selector según tema (blanco en oscuro/8bit, negro en claro) */
+[data-theme="dark"] .theme-btn:not(.active),
+[data-theme="8bit"] .theme-btn:not(.active){color:#ffffff}
+[data-theme="light"] .theme-btn:not(.active){color:#000000}
+
 /* ====== HERO ====== */
 .hero{min-height:88vh;display:grid;place-items:center;padding:2rem 1rem;border-bottom:1px solid var(--border);text-align:center}
 .hero-inner{width:min(92%,1000px)}
