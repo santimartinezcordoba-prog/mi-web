@@ -36,16 +36,11 @@ body{
     var(--bg);
   transition:background-color .3s ease,color .3s ease;
 }
-/* Scanlines CRT (por debajo de la estela) */
+/* Scanlines CRT */
 body::before{
   content:""; position:fixed; inset:0; pointer-events:none;
   background:repeating-linear-gradient(to bottom,rgba(255,255,255,.06) 0,rgba(255,255,255,.06) 1px,transparent 1px,transparent 4px);
-  opacity:var(--scan-opacity); z-index:997;
-}
-/* Estela Sandevistan (por encima de scanlines, bajo el selector) */
-#sandevistan{
-  position:fixed; inset:0; width:100%; height:100%;
-  pointer-events:none; z-index:999;
+  opacity:var(--scan-opacity); z-index:999;
 }
 a{color:var(--accent3);text-decoration:none}
 a:hover,a:focus-visible{color:#fff}
@@ -66,7 +61,7 @@ a:hover,a:focus-visible{color:#fff}
 .theme-btn:hover{border-color:var(--accent1)}
 .theme-btn.active{background:var(--accent1);color:#fff}
 
-/* Color de las letras del selector según tema (blanco en oscuro/8bit, negro en claro) */
+/* Letras del selector según tema */
 [data-theme="dark"] .theme-btn:not(.active),
 [data-theme="8bit"] .theme-btn:not(.active){color:#ffffff}
 [data-theme="light"] .theme-btn:not(.active){color:#000000}
